@@ -1,0 +1,6 @@
+n=int(input("enter the no:"));
+sum=0;
+while rem>0:
+   n=n%10;
+   sum+=n;
+print(n);
