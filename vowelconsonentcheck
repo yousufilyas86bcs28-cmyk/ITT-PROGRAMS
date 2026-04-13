@@ -1,0 +1,4 @@
+a=input("enter the character");
+s={'a','e','i','o','u'};
+result="vowels" if a in s else "consonanat";
+print(result);
