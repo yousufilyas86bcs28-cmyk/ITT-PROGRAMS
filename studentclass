@@ -1,0 +1,15 @@
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display(self):
+        print(f"Name: {self.name}, Marks: {self.marks}")
+
+# Example usage:
+name_input = input("Enter Name: ")
+marks_input = input("Enter Marks: ")
+
+s1 = Student(name_input, marks_input)
+s1.display()
+
