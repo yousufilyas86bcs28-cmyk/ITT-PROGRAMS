@@ -1,0 +1,5 @@
+p=int(input("enter the principle rate"))
+n=int(input("enter the no of years"))
+r=float(input("enter the rate of interest"))
+si=(p*n*r)/100
+print(si)
