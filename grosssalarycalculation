@@ -1,0 +1,5 @@
+basic_pay=int(input("enter the basic pay"));
+hra=0.2*basic_pay;
+da=0.01*basic_pay;
+gross=hra+da;
+print("the gross salary:",gross);
