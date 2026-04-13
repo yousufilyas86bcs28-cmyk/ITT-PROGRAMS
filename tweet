@@ -1,0 +1,23 @@
+
+import re
+
+class HashtagExtractor:
+    def __init__(self, text):
+        self.text = text
+        self.hashtags = []
+
+    def extract(self):
+
+        pattern = r'#\w+'
+        self.hashtags = re.findall(pattern, self.text)
+
+    def display(self):
+        if self.hashtags:
+            print(", ".join(self.hashtags))
+        else:
+            print("No hashtags found.")
+
+tweet_input = input("Enter your tweet: ")
+extractor = HashtagExtractor(tweet_input)
+extractor.extract()
+extractor.display()
