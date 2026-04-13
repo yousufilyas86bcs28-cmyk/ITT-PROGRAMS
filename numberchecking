@@ -1,0 +1,3 @@
+n=int(input("enter the no:"));
+result="positive" if n>0 else("negative" if n<0  else "zero");
+print(result);
