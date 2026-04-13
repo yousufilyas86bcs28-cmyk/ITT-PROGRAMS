@@ -1,0 +1,26 @@
+
+import re
+
+class PhoneExtractor:
+    def __init__(self, text):
+        self.text = text
+        self.phone_numbers = []
+
+    def extract(self):
+
+        pattern = r'\b\d{10}\b'
+        self.phone_numbers = re.findall(pattern, self.text)
+
+    def display(self):
+        if self.phone_numbers:
+            print("Extracted Phone Numbers:")
+            for num in self.phone_numbers:
+                print(num)
+        else:
+            print("No 10-digit phone numbers found.")
+
+
+paragraph = input("Enter a paragraph: ")
+extractor = PhoneExtractor(paragraph)
+extractor.extract()
+extractor.display()
