@@ -1,0 +1,4 @@
+balance=100000;
+n=int(input("enter the amount to withdraw"));
+result="withdraw succesfull" if n<balance and n%100==0 else "unsuccessfull";
+print(result);
