@@ -1,0 +1,18 @@
+class NumberProcessor:
+    def __init__(self, numbers):
+
+        self.numbers = list(map(int, numbers.split()))
+
+    def process(self):
+
+        squared_numbers = map(lambda x: x**2, self.numbers)
+
+
+        self.even_squares = list(filter(lambda x: x % 2 == 0, squared_numbers))
+
+    def display(self):
+        print(self.even_squares)
+user_input = input("Enter numbers separated by spaces: ")
+processor = NumberProcessor(user_input)
+processor.process()
+processor.display()
