@@ -1,0 +1,5 @@
+a=int(input("enter the first no"));
+b=int(input("enter the second no"));
+c=int(input("enter the third no"));
+result=a if a>c and a>b else(b if b>a and b>c else c);
+print("the largest no",result);
