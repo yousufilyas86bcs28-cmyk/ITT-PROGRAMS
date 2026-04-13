@@ -1,0 +1,9 @@
+arr=[10,50,20,30,40];
+removedelts=50;
+j=0;
+for i in range(0,5):
+   if (arr[i]!=removedelts):
+      arr[j]=arr[i];
+for j in range(0,5):
+   print(arr[j]);
+
