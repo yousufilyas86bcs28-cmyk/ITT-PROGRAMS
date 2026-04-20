@@ -1,0 +1,7 @@
+import datetime
+start_time=datetime.strptime("12-30-20","%H:%M:%S")
+end_time=datetime.strptime("12-35-12","%H:%M:%S")
+time_diff=end_time-start_time
+total_seconds=time_diff.total_seconds()
+minutes,seconds=divmod(total_seconds,60)
+print(minutes,seconds)
