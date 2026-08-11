@@ -1,0 +1,32 @@
+class CustomStack:
+
+    def __init__(self, maxSize: int):
+        self.maxSize = maxSize
+        self.stack = []
+        self.inc_tracker = []
+
+    def push(self, x: int) -> None:
+        if len(self.stack) < self.maxSize:
+            self.stack.append(x)
+            self.inc_tracker.append(0)
+
+    def pop(self) -> int:
+        if not self.stack:
+            return -1
+
+        idx = len(self.stack) - 1
+        
+        val = self.stack.pop() + self.inc_tracker[idx]
+
+        lazy_inc = self.inc_tracker.pop()
+        if idx > 0:
+            self.inc_tracker[idx - 1] += lazy_inc
+
+        return val
+
+    def increment(self, k: int, val: int) -> None:
+       
+        limit_idx = min(k, len(self.stack)) - 1
+        if limit_idx >= 0:
+            self.inc_tracker[limit_idx] += val
+
