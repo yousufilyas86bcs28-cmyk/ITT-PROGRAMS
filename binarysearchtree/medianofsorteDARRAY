@@ -1,0 +1,13 @@
+class Solution:
+    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
+        output = sorted(nums1 + nums2)
+        n = len(output)
+        if n % 2 != 0:
+            new = output[n // 2]
+            return new
+        else:
+            # Modified to target only the two middle numbers instead of looping over all elements
+            mid1 = output[(n // 2) - 1]
+            mid2 = output[n // 2]
+            med = (mid1 + mid2) / 2
+            return med
