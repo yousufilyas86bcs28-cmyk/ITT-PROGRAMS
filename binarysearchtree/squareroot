@@ -1,0 +1,19 @@
+class Solution {
+    int k;
+    public int mySqrt(int x) {
+        // Base case for 0
+        if (x == 0) return 0;
+
+        // Use 'long' for i and j to safely prevent integer overflow 
+        // Loop runs by 1s (i++) which removes all decimal precision errors
+        for (long i = 1; i * i <= x; i++) {
+            long j = i * i;
+
+            // If j is less than or equal to x, i is a valid floor square root
+            if (j <= x) {
+                k = (int) i; 
+            }
+        }
+        return k;
+    }
+}
